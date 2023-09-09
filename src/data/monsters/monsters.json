@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Goblin 1",
+    "imageSrc": "goblinBasic.jpeg",
+    "class": "Goblin",
+    "level": 1,
+    "healthPoints": "??",
+    "initiative": 15,
+    "armorValue": "??",
+    "isEnemy": true,
+    "damageTaken": 0
+  },
+  {
+    "name": "Goblin 2",
+    "imageSrc": "goblinBasic.jpeg",
+    "class": "Goblin",
+    "level": 1,
+    "healthPoints": "??",
+    "initiative": 20,
+    "armorValue": "??",
+    "isEnemy": true,
+    "damageTaken": 0
+  },
+  {
+    "name": "Goblin 3",
+    "imageSrc": "goblinBasic.jpeg",
+    "class": "Goblin",
+    "level": 1,
+    "healthPoints": "??",
+    "initiative": 3,
+    "armorValue": "??",
+    "isEnemy": true,
+    "damageTaken": 0
+  },
+  {
+    "name": "Goblin 4",
+    "imageSrc": "goblinBasic.jpeg",
+    "class": "Goblin",
+    "level": 1,
+    "healthPoints": "??",
+    "initiative": 1,
+    "armorValue": "??",
+    "isEnemy": true,
+    "damageTaken": 0
+  },
+  {
+    "name": "Jefe Goblin",
+    "imageSrc": "goblinBasic.jpeg",
+    "class": "Goblin",
+    "level": 1,
+    "healthPoints": "??",
+    "initiative": 18,
+    "armorValue": "??",
+    "isEnemy": true,
+    "damageTaken": 0
+  }
+]

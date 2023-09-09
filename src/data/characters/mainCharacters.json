@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Tyr",
+    "imageSrc": "Tyr.jpeg",
+    "class": "Bard",
+    "level": 1,
+    "healthPoints": 8,
+    "initiative": 15,
+    "armorValue": 14,
+    "isEnemy": false,
+    "damageTaken": 0
+  },
+  {
+    "name": "Yoshi",
+    "imageSrc": "Yoshi.jpeg",
+    "class": "Sorcerer",
+    "level": 1,
+    "healthPoints": 8,
+    "initiative": 20,
+    "armorValue": 14,
+    "isEnemy": false,
+    "damageTaken": 0
+  },
+  {
+    "name": "Larry",
+    "imageSrc": "Larry.jpeg",
+    "class": "Rogue",
+    "level": 1,
+    "healthPoints": 8,
+    "initiative": 3,
+    "armorValue": 14,
+    "isEnemy": false,
+    "damageTaken": 0
+  },
+  {
+    "name": "Caronte",
+    "imageSrc": "Caronte.jpeg",
+    "class": "Warlock",
+    "level": 1,
+    "healthPoints": 8,
+    "initiative": 1,
+    "armorValue": 14,
+    "isEnemy": false,
+    "damageTaken": 0
+  },
+  {
+    "name": "personaje de andres",
+    "imageSrc": "Andres.jpeg",
+    "class": "Cleric",
+    "level": 1,
+    "healthPoints": 8,
+    "initiative": 18,
+    "armorValue": 14,
+    "isEnemy": false,
+    "damageTaken": 0
+  }
+]
