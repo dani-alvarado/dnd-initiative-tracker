@@ -3,18 +3,23 @@
     :key="character.name"
     :class="cardClass"
     class="card"
-    style="width: 18rem; border-radius: 30px; margin-bottom: 0.5rem"
+    :style="{
+      width: '18rem',
+      borderRadius: '30px',
+      marginBottom: '0.5rem',
+    }"
   >
     <div class="container" style="height: 20rem">
       <img
         :src="character.imageSrc"
-        style="
-          width: 100%;
-          height: 100%;
-          padding: 1rem;
-          object-fit: cover;
-          border-radius: 50px;
-        "
+        :style="{
+          width: '100%',
+          height: '100%',
+          padding: '1rem',
+          objectFit: 'cover',
+          borderRadius: '50px',
+          border: isBloody ? '0.3rem solid red' : '',
+        }"
         class="card-img-top"
         alt="Character Image"
       />
@@ -26,10 +31,14 @@
       </h5>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          HP: {{ calculateCurrentHealth() }}/{{ character.healthPoints }}
+          HP: {{ character.isEnemy ? "???" : currentHealth }}/{{
+            character.isEnemy ? "???" : character.healthPoints
+          }}
         </li>
         <li class="list-group-item">Initiative: {{ character.initiative }}</li>
-        <li class="list-group-item">Armor: {{ character.armorValue }}</li>
+        <li class="list-group-item">
+          Armor: {{ character.isEnemy ? "???" : character.armorValue }}
+        </li>
       </ul>
       <div class="input-group">
         <input
@@ -57,32 +66,33 @@ export default {
   data() {
     return {
       damageAmount: "",
-      damageTaken: 0, // Initialize damageTaken
     };
-  },
-  methods: {
-    applyDamage() {
-      // Convert the damageAmount to a number and apply it to the copied character
-      const damage = parseInt(this.damageAmount);
-      if (!isNaN(damage) && damage >= 0) {
-        this.damageTaken += damage;
-        // Clear the input field after applying damage
-        this.$emit("apply-damage", this.character);
-        this.damageAmount = "";
-      } else {
-        // Handle invalid input (e.g., show a message to the user)
-        alert("Incorrect value, please enter a positive integer");
-      }
-    },
-    calculateCurrentHealth() {
-      return this.character.healthPoints - this.damageTaken;
-    },
   },
   computed: {
     cardClass() {
       return {
         "enemy-card": this.character.isEnemy,
       };
+    },
+    currentHealth() {
+      // Calculate the current health by subtracting the damage taken
+      return this.character.healthPoints - this.character.damageTaken;
+    },
+    isBloody() {
+      // Determine if the character is in the "Bloody" state (health is at half or less)
+      return this.currentHealth <= this.character.healthPoints / 2;
+    },
+  },
+  methods: {
+    applyDamage() {
+      // Convert the damageAmount to a number and apply it to the character
+      const damage = parseInt(this.damageAmount);
+      if (!isNaN(damage) && damage >= 0) {
+        this.$emit("apply-damage", this.character, damage);
+        this.damageAmount = "";
+      } else {
+        alert("Incorrect value, please enter a positive integer");
+      }
     },
   },
 };

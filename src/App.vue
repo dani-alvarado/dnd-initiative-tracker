@@ -5,6 +5,7 @@
       v-for="character in sortedCharacters"
       :key="currentTurn + '-' + character.name"
       :character="character"
+      @apply-damage="applyDamage"
     />
   </div>
 </template>
@@ -35,15 +36,17 @@ export default {
     this.characters = [...mainCharacters, ...enemyCharacters];
   },
   methods: {
-    applyDamage(updatedCharacter) {
+    applyDamage(character, damageAmount) {
+      damageAmount = Math.max(0, Math.floor(damageAmount));
+
       // Find the index of the updated character in the characters array
       const index = this.characters.findIndex(
-        (char) => char.name === updatedCharacter.name
+        (char) => char.name === character.name
       );
 
       // Update the character in the characters array
       if (index !== -1) {
-        this.characters[index] = updatedCharacter;
+        this.characters[index].damageTaken += damageAmount;
       }
     },
     nextTurn() {
