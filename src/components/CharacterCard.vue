@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="character.isAvailable || character.isEnemy"
     :key="character.name"
     :class="cardClass"
     class="card"

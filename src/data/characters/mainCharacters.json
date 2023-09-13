@@ -4,11 +4,12 @@
     "imageSrc": "Tyr.jpeg",
     "class": "Bard",
     "level": 1,
-    "healthPoints": 8,
-    "initiative": 15,
-    "armorValue": 14,
+    "healthPoints": 7,
+    "initiative": 8,
+    "armorValue": 12,
     "isEnemy": false,
-    "damageTaken": 0
+    "damageTaken": 0,
+    "isAvailable": true
   },
   {
     "name": "Yoshi",
@@ -16,10 +17,11 @@
     "class": "Sorcerer",
     "level": 1,
     "healthPoints": 8,
-    "initiative": 20,
-    "armorValue": 14,
+    "initiative": 23,
+    "armorValue": 15,
     "isEnemy": false,
-    "damageTaken": 0
+    "damageTaken": 0,
+    "isAvailable": true
   },
   {
     "name": "Larry",
@@ -30,28 +32,43 @@
     "initiative": 3,
     "armorValue": 14,
     "isEnemy": false,
-    "damageTaken": 0
+    "damageTaken": 0,
+    "isAvailable": false
   },
   {
     "name": "Caronte",
     "imageSrc": "Caronte.jpeg",
     "class": "Warlock",
     "level": 1,
-    "healthPoints": 8,
+    "healthPoints": 9,
     "initiative": 1,
-    "armorValue": 14,
+    "armorValue": 13,
     "isEnemy": false,
-    "damageTaken": 0
+    "damageTaken": 0,
+    "isAvailable": false
   },
   {
-    "name": "personaje de andres",
+    "name": "Arche",
     "imageSrc": "Andres.jpeg",
     "class": "Cleric",
     "level": 1,
-    "healthPoints": 8,
-    "initiative": 18,
+    "healthPoints": 11,
+    "initiative": 10,
+    "armorValue": 18,
+    "isEnemy": false,
+    "damageTaken": 0,
+    "isAvailable": true
+  },
+  {
+    "name": "Rembrandt",
+    "imageSrc": "Rembrandt.png",
+    "class": "Warlock",
+    "level": 1,
+    "healthPoints": 10,
+    "initiative": 14,
     "armorValue": 14,
     "isEnemy": false,
-    "damageTaken": 0
+    "damageTaken": 0,
+    "isAvailable": true
   }
 ]

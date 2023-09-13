@@ -5,7 +5,7 @@
     "class": "Goblin",
     "level": 1,
     "healthPoints": 7,
-    "initiative": 15,
+    "initiative": 22,
     "armorValue": 15,
     "isEnemy": true,
     "damageTaken": 0
@@ -16,7 +16,7 @@
     "class": "Goblin",
     "level": 1,
     "healthPoints": 7,
-    "initiative": 20,
+    "initiative": 17,
     "armorValue": 15,
     "isEnemy": true,
     "damageTaken": 0
@@ -27,7 +27,7 @@
     "class": "Goblin",
     "level": 1,
     "healthPoints": 7,
-    "initiative": 3,
+    "initiative": 9,
     "armorValue": 15,
     "isEnemy": true,
     "damageTaken": 0
@@ -38,19 +38,19 @@
     "class": "Goblin",
     "level": 1,
     "healthPoints": 7,
-    "initiative": 1,
+    "initiative": 14,
     "armorValue": 15,
     "isEnemy": true,
     "damageTaken": 0
   },
   {
-    "name": "Jefe Goblin",
+    "name": "mini Jefe Goblin",
     "imageSrc": "goblinJefe.jpeg",
     "class": "Goblin Boss",
     "level": 1,
-    "healthPoints": 21,
+    "healthPoints": 18,
     "initiative": 18,
-    "armorValue": 17,
+    "armorValue": 16,
     "isEnemy": true,
     "damageTaken": 0
   }
