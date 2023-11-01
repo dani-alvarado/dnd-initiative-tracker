@@ -8,9 +8,10 @@
       width: '18rem',
       borderRadius: '30px',
       marginBottom: '0.5rem',
+      filter: isDead ? 'blur(3px)' : '',
     }"
   >
-    <div class="container" style="height: 20rem">
+    <div class="container" :style="{ height: '20rem' }">
       <img
         :src="character.imageSrc"
         :style="{
@@ -20,6 +21,7 @@
           objectFit: 'cover',
           borderRadius: '50px',
           border: isBloody ? '0.3rem solid red' : '',
+          border: isDead ? '0.3rem solid black' : '',
         }"
         class="card-img-top"
         alt="Character Image"
@@ -41,7 +43,14 @@
           Armor: {{ character.isEnemy ? "???" : character.armorValue }}
         </li>
       </ul>
+      <hr />
       <div class="input-group">
+        <input
+          v-model="damageRoll"
+          type="number"
+          class="form-control"
+          placeholder="Roll"
+        />
         <input
           v-model="damageAmount"
           type="number"
@@ -49,9 +58,19 @@
           placeholder="Damage Amount"
         />
         <div class="input-group-append">
-          <button @click="applyDamage" class="btn btn-danger">
-            Apply Damage
-          </button>
+          <button @click="applyDamage" class="btn btn-danger">DMG</button>
+        </div>
+      </div>
+      <hr />
+      <div class="input-group">
+        <input
+          v-model="healAmount"
+          type="number"
+          class="form-control"
+          placeholder="Heal"
+        />
+        <div class="input-group-append">
+          <button @click="applyHeal" class="btn btn-primary">Heal</button>
         </div>
       </div>
     </div>
@@ -67,6 +86,8 @@ export default {
   data() {
     return {
       damageAmount: "",
+      damageRoll: "",
+      healAmount: "",
     };
   },
   computed: {
@@ -83,16 +104,34 @@ export default {
       // Determine if the character is in the "Bloody" state (health is at half or less)
       return this.currentHealth <= this.character.healthPoints / 2;
     },
+    isDead() {
+      return this.currentHealth <= 0;
+    },
   },
   methods: {
     applyDamage() {
       // Convert the damageAmount to a number and apply it to the character
       const damage = parseInt(this.damageAmount);
+      const damageRoll = parseInt(this.damageRoll);
+      console.log(this.character.armorValue);
+
       if (!isNaN(damage) && damage >= 0) {
-        this.$emit("apply-damage", this.character, damage);
-        this.damageAmount = "";
+        if (damageRoll >= this.character.armorValue) {
+          this.$emit("apply-damage", this.character, damage);
+          this.damageAmount = "";
+        } else {
+          alert("Miss!");
+        }
       } else {
         alert("Incorrect value, please enter a positive integer");
+      }
+    },
+    applyHeal() {
+      const healAmount = parseInt(this.healAmount);
+      alert(this.character.healthPoints);
+      if (!isNaN(healAmount) && healAmount >= 0) {
+        this.$emit("apply-heal", this.character, healAmount);
+        this.healAmount = "";
       }
     },
   },
@@ -102,6 +141,6 @@ export default {
 <style lang="css" scoped>
 .enemy-card {
   /* Add styles for the red underglow here */
-  border-bottom: 4px solid red;
+  border-bottom: 3px solid red;
 }
 </style>
