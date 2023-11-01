@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Rufian Marca Roja - 1",
+    "imageSrc": "Redbrand1.jpg",
+    "class": "Rufian",
+    "level": "'???'",
+    "healthPoints": 17,
+    "initiative": 20,
+    "armorValue": 14,
+    "isEnemy": true,
+    "damageTaken": 0
+  },
+  {
+    "name": "Rufian Marca Roja - 2",
+    "imageSrc": "Redbrand2.jpg",
+    "class": "Rufian",
+    "level": "'???'",
+    "healthPoints": 18,
+    "initiative": 13,
+    "armorValue": 14,
+    "isEnemy": true,
+    "damageTaken": 0
+  },
+  {
+    "name": "Rufian Marca Roja - 1",
+    "imageSrc": "Redbrand1.jpg",
+    "class": "Rufian",
+    "level": "'???'",
+    "healthPoints": 17,
+    "initiative": 19,
+    "armorValue": 14,
+    "isEnemy": true,
+    "damageTaken": 0
+  }
+]

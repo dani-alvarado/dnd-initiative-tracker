@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Esqueleto - 1",
+    "imageSrc": "SKELETON.jpg",
+    "class": "No muerto",
+    "level": "'???'",
+    "healthPoints": 18,
+    "initiative": 1,
+    "armorValue": 13,
+    "isEnemy": true,
+    "damageTaken": 0
+  },
+  {
+    "name": "Esqueleto - 2",
+    "imageSrc": "SKELETON.jpg",
+    "class": "No muerto",
+    "level": "'???'",
+    "healthPoints": 9,
+    "initiative": 20,
+    "armorValue": 9,
+    "isEnemy": true,
+    "damageTaken": 0
+  },
+  {
+    "name": "Esqueleto - 3",
+    "imageSrc": "SKELETON.jpg",
+    "class": "No muerto",
+    "level": "'???'",
+    "healthPoints": 14,
+    "initiative": 13,
+    "armorValue": 13,
+    "isEnemy": true,
+    "damageTaken": 0
+  }
+]

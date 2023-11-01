@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Osgo - 1",
+    "imageSrc": "Bugbear1.jpg",
+    "class": "Osgo",
+    "level": "'???'",
+    "healthPoints": 16,
+    "initiative": 13,
+    "armorValue": 16,
+    "isEnemy": true,
+    "damageTaken": 0
+  },
+  {
+    "name": "Osgo - 2",
+    "imageSrc": "Bugbear2.jpg",
+    "class": "Osgo",
+    "level": "'???'",
+    "healthPoints": 19,
+    "initiative": 7,
+    "armorValue": 16,
+    "isEnemy": true,
+    "damageTaken": 0
+  },
+  {
+    "name": "Osgo - 3",
+    "imageSrc": "Bugbear3.jpg",
+    "class": "Osgo",
+    "level": "'???'",
+    "healthPoints": 19,
+    "initiative": 7,
+    "armorValue": 16,
+    "isEnemy": true,
+    "damageTaken": 0
+  }
+]
